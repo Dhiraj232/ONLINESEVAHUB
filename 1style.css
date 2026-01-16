@@ -1,0 +1,132 @@
+/* ===== VARIABLES ===== */
+:root {
+  --orange: #ff9933;
+  --green: #138808;
+  --black: #111827;
+  --border: #e5e7eb;
+  --bg: #ffffff;
+  --blue: #2563eb;
+}
+
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* ===== HEADER ===== */
+.header {
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  max-width: 1400px;
+  margin: auto;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+/* ===== LOGO ===== */
+.brand {
+  font-size: 30px;
+  font-weight: 800;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.online { color: var(--orange); }
+.seva   { color: var(--black); }
+.hub    { color: var(--green); }
+
+/* ===== SEARCH (FLIPKART STYLE) ===== */
+.search {
+  flex: 1;
+}
+
+.search input {
+  width: 100%;
+  padding: 14px 18px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  font-size: 15px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.search input:focus {
+  border-color: var(--orange);
+  box-shadow: 0 0 0 3px rgba(255,153,51,0.2);
+}
+
+/* ===== BUTTONS ===== */
+.nav-actions {
+  display: flex;
+  gap: 14px; /* SPACE BETWEEN BUTTONS */
+}
+
+.btn {
+  padding: 12px 18px;
+  border-radius: 8px;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+/* BUTTON COLORS */
+.whatsapp {
+  background: #25d366;
+  color: #fff;
+}
+
+.login {
+  background: var(--orange);
+  color: #fff;
+}
+
+.support {
+  background: var(--blue);
+  color: #fff;
+}
+
+.cart {
+  background: var(--green);
+  color: #fff;
+}
+
+/* ===== HOVER EFFECTS ===== */
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* LOGO HOVER */
+.brand:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+  .search {
+    width: 100%;
+    order: 3;
+  }
+
+  .nav-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
